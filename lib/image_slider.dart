@@ -17,7 +17,7 @@ class _imageSliderState extends State<imageSlider> {
     "https://images.unsplash.com/photo-1604158640082-226d434cf47a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
     //"https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600",
-    //"https://i.pinimg.com/236x/55/38/c2/5538c2c6c4ba49638e68e47fb3a66a33.jpg"
+    "https://i.pinimg.com/236x/55/38/c2/5538c2c6c4ba49638e68e47fb3a66a33.jpg"
   ];
 
   @override
@@ -30,6 +30,7 @@ class _imageSliderState extends State<imageSlider> {
         autoPlayInterval: Duration(seconds: 3),
         viewportFraction: 1,
         autoPlayAnimationDuration: Duration(seconds: 3),
+
 
 
       ),

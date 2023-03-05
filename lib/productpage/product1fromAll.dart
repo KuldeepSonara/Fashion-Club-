@@ -2,45 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:photo_view/photo_view.dart';
 
+import '../appbar.dart';
+
 class product1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.white,
-        title: Center(
-          child: TextButton(
-            onPressed: () {},
-            child: Image.asset(
-              "assets/images/app bar image/Vector.png",
-              width: 80,
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: new Image.asset("assets/images/app bar image/Search.png")),
-          IconButton(
-              onPressed: () {},
-              icon: new Image.asset(
-                  "assets/images/app bar image/shoppingbag.png")),
-        ],
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-                icon: const Image(
-                    image: AssetImage("assets/images/app bar image/Menu.png")));
-          },
-        ),
-      ),
+      appBar: Coustomappbar(),
       drawer: Drawer(),
       body: ListView(
+        padding: EdgeInsets.all(8),
         children: [
           Container(
             height: MediaQuery.of(context).size.height * (1 / (1.5)),
@@ -90,26 +61,47 @@ class product1 extends StatelessWidget {
             child: Image.asset("assets/images/productNavigater.png"),
           ),
           Container(
+            // padding: EdgeInsets.only(left: 10),
             child: Row(
               children: [
                 Expanded(
                   child: Container(
                     child: Text(
-                      "mohan",
+                      "BENSIMON",
                       style: GoogleFonts.getFont(('EB Garamond'),
-                          textStyle: TextStyle(fontSize: 35,letterSpacing: 3)),
+                          textStyle: TextStyle(fontSize: 30, letterSpacing: 3)),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     alignment: Alignment.topRight,
-                    child: Image.asset("assets/images/Export.png",width: 50),
+                    child: Image.asset("assets/images/Export.png", width: 50),
                   ),
                 )
               ],
             ),
-          )
+          ),
+          Container(
+            child: Text(
+              'Color Mixed Knit Vest Woman (Beige)',
+              style: GoogleFonts.getFont("EB Garamond",
+                  textStyle: TextStyle(
+                      color: Colors.black45, fontSize: 20, wordSpacing: 1)),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 10),
+            child: Text(
+              "\$120",
+              style: GoogleFonts.getFont("EB Garamond",
+                  textStyle: TextStyle(
+                      color: Colors.deepOrange.shade300,
+                      fontSize: 25,
+                      letterSpacing: 1,
+                      wordSpacing: 1)),
+            ),
+          ),
         ],
       ),
     );
@@ -120,39 +112,7 @@ class zoompic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.white,
-        title: Center(
-          child: TextButton(
-            onPressed: () {},
-            child: Image.asset(
-              "assets/images/app bar image/Vector.png",
-              width: 80,
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: new Image.asset("assets/images/app bar image/Search.png")),
-          IconButton(
-              onPressed: () {},
-              icon: new Image.asset(
-                  "assets/images/app bar image/shoppingbag.png")),
-        ],
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-                icon: const Image(
-                    image: AssetImage("assets/images/app bar image/Menu.png")));
-          },
-        ),
-      ),
+      appBar: Coustomappbar(),
       body: Hero(
         tag: "product1",
         child: Container(

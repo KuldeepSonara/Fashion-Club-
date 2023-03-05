@@ -12,10 +12,6 @@ class welcome_page extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            // decoration: BoxDecoration(
-            //     image: DecorationImage(
-            //         image: AssetImage("assets/images/welcome_page_bg.png"),
-            //         fit: BoxFit.cover)),
             child: imageSliderWP(),
           ),
           BlurryContainer(
@@ -104,7 +100,8 @@ class welcome_page extends StatelessWidget {
                                             child: Image.asset(
                                                 "assets/images/twitter.png")),
                                         TextButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                            },
                                             child: Image.asset(
                                                 "assets/images/google.png")),
                                       ],

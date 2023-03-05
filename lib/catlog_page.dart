@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fsionclube1/cataloge/all.dart';
+import 'package:fsionclube1/explor%20carloge/product_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'appbar.dart';
 import 'image_slider.dart';
 
 class catalog_page extends StatefulWidget {
@@ -13,42 +15,7 @@ class _catalog_pageState extends State<catalog_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: true,
-          backgroundColor: Colors.white,
-          title: Center(
-            child: TextButton(
-              onPressed: () {},
-              child: Image.asset(
-                "assets/images/app bar image/Vector.png",
-                width: 80,
-              ),
-            ),
-          ),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon:
-                    new Image.asset("assets/images/app bar image/Search.png")),
-            IconButton(
-                onPressed: () {},
-                icon: new Image.asset(
-                    "assets/images/app bar image/shoppingbag.png")),
-          ],
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  },
-                  tooltip:
-                      MaterialLocalizations.of(context).openAppDrawerTooltip,
-                  icon: const Image(
-                      image:
-                          AssetImage("assets/images/app bar image/Menu.png")));
-            },
-          ),
-        ),
+        appBar: Coustomappbar(),
         drawer: Drawer(),
         body: ListView(
           children: [
@@ -89,7 +56,9 @@ class _catalog_pageState extends State<catalog_page> {
                             padding: EdgeInsets.all(8),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+                                  return productList();
+                                }, ));
                               },
                               child: Text(
                                 "EXPLORE COLLECTON",
